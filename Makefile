@@ -87,7 +87,10 @@ list:
 	docker-compose exec php php artisan route:list
 
 mix:
-	dc run node npm run dev
+	docker-compose run --rm node npm run dev
 
 npm-install:
-	dc run node npm install
+	docker-compose run --rm node npm install
+
+watch:
+	docker-compose run --rm node npm run watch
