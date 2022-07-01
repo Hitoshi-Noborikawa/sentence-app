@@ -11,7 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('tailwindcss'),
-    require('autoprefixer'),
-]);
+mix.js('resources/js/app.js', 'public/js')
+mix.js('resources/js/show_chart.js', 'public/js')
+mix.js('resources/js/calc.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('tailwindcss'),
+        require('autoprefixer'),
+    ])
+    .autoload({
+        jquery: ['$', 'window.jQuery']
+    })
+.version()
+.disableNotifications();

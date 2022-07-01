@@ -1,4 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=2d5ac735dca4750a09cc6a346a3dddc7",
+    "/js/show_chart.js": "/js/show_chart.js?id=98f15fe736c5d1908a9991eeff6cea03",
+    "/js/calc.js": "/js/calc.js?id=3347fbd1de3cec03597948d7c559d57f",
+    "/css/app.css": "/css/app.css?id=da2f7fa2f73093c7f39c58f2b0da6e39"
 }

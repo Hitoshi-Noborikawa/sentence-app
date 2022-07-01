@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Top') }}
+            {{ __('Performance') }}
         </h2>
     </x-slot>
 
@@ -9,14 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 @if (count($sentences) !== 0)
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <a href="{{ route('practice.step1', ['user_id' => Auth::user()->id]) }}">新しい文章を作成する</a>
-                </div>
                 <div class="px-2">
                     <div class="flex -mx-2">
                         @foreach ($sentences as $sentence)
                         <div class="w-1/3 px-2">
-                            <a href="{{ route('practice.step2', ['user_id' => $user->id, 'sentence_id' => $sentence->id]) }}">
+                            <a href="{{ route('performance.detail', ['user_id' => $user->id, 'sentence_id' => $sentence->id]) }}">
                                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
                                     <div class="px-6 py-4">
                                         <div class="font-bold text-xl mb-2">{{ $sentence->title }}</div>
@@ -30,10 +27,11 @@
                 </div>
                 @else
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <a href="{{ route('practice.step1', ['user_id' => Auth::user()->id]) }}">新しい文章を作成する</a>
+                    <h1>文章が作成されていません。</h1>
                 </div>
                 @endif
             </div>
         </div>
     </div>
+
 </x-app-layout>
